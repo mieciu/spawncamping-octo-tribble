@@ -12,11 +12,10 @@
     }
   ],
 
-  "provisioners": [ 
+  "provisioners": [
     {
-       "type": "puppet-masterless",
-       "manifest_file": "site.pp",
-       "module_paths": [ "./modules" ]
+       "type": "shell",
+       "inline": ["> aaasdf"]
     }
   ]
 }
