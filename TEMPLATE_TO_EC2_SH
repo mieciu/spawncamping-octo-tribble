@@ -1,0 +1,23 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "
+      "secret_key": "
+        "region": "ap-northeast-1",
+	  "source_ami": "ami-bfdaa2be",
+	    "instance_type": "t1.micro",
+	      "ssh_username": "ubuntu",
+   "ami_name": "packer-quick-start {{timestamp}}"
+    }
+  ],
+
+  "provisioners": [ 
+    {
+       "type": "puppet-masterless",
+       "manifest_file": "site.pp",
+       "module_paths": [ "./modules" ]
+    }
+  ]
+}
+
